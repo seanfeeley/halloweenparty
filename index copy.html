@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<!--
+	Astral 2.5 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<base target="_top">
+		<title>Sean Feeley</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+			<link rel="stylesheet" href="css/noscript.css" />
+		</noscript>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#me" class="fa fa-home active"><span>Home</span></a>
+						<a href="#work" class="fa fa-folder"><span>Work</span></a>
+						<a href="#game" class="fa fa-gamepad"><span>Game</span></a>
+						<a href="http://twitter.com/seanbeamer" class="fa fa-twitter"><span>Twitter</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						
+						<!-- Me -->
+							<article id="me" class="panel">
+								<header>
+									<h1>Sean Feeley</h1>
+									<span class="byline">Terrible Coder/Amateur Camera Holder</span>
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="jumplink arrow fa fa-chevron-right"><span>See my work</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+
+						<!-- Work --> 
+							<article id="work" class="panel">
+								<header>
+									<h2>Places</h2>
+								</header>
+
+								<section class="is-gallery">
+									<div class="row half">
+										<div class="4u">
+											<a href="https://vimeo.com/user3330980" class="image image-full"><img src="images/1.png" target="_top" alt=""></a>
+										</div>
+										<div class="4u">
+											<a href="http://www.imdb.com/name/nm5921192/?ref_=fn_al_nm_2" class="image image-full"><img src="images/2.png" target="_top" alt=""></a>
+										</div>
+										<div class="4u">
+											<a href="https://www.flickr.com/photos/123094407@N06/" class="image image-full"><img src="images/3.png" target="_top" alt=""></a>
+										</div>
+									</div>
+									<div class="row half">
+										<div class="4u">
+											<a href="https://github.com/seanfeeley/" class="image image-full"><img src="images/4.png" target="_top" alt=""></a>
+										</div>
+										<div class="4u">
+											<a href="https://www.linkedin.com/profile/view?id=124947213&trk=nav_responsive_tab_profile" class="image image-full"><img src="images/5.png" target="_top" alt=""></a>
+										</div>
+										<div class="4u">
+											<a href="http://pheeley.tumblr.com/" class="image image-full"><img src="images/6.png" target="_top" alt=""></a>
+										</div>
+									</div>
+
+								</section>
+							</article>
+					<!-- Game --> 
+<article id="game" class="panel">
+	<header>
+									<h2>PONG 2</h2>
+								</header>
+		
+	
+		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+			
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "player.unity3d");
+			});
+		-->
+		</script>
+		<style type="text/css">
+		<!--
+		body {
+			font-family: Helvetica, Verdana, Arial, sans-serif;
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+		a:link, a:visited {
+			color: #bfbfbf;
+		}
+		a:active, a:hover {
+			color: #bfbfbf;
+		}
+		p.header {
+			font-size: small;
+		}
+		p.header span {
+			font-weight: bold;
+		}
+		p.footer {
+			font-size: x-small;
+		}
+		div.content {
+			margin: auto;
+			width: 960px;
+		}
+		div.broken,
+		div.missing {
+			margin: auto;
+			position: relative;
+			top: 50%;
+			width: 193px;
+		}
+		div.broken a,
+		div.missing a {
+			height: 63px;
+			position: relative;
+			top: -31px;
+		}
+		div.broken img,
+		div.missing img {
+			border-width: 0px;
+		}
+		div.broken {
+			display: none;
+		}
+		div#unityPlayer {
+			cursor: default;
+			height: 600px;
+			width: 800px;
+		}
+		-->
+		</style>
+	
+	<div class="content">
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+	</article>
+	
+
+
+						
+
+					</div>
+		
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="links">
+							
+							<li>Design : <a href="http://html5up.net/">HTML5 UP</a></li>
+						</ul>
+					</div>
+		
+			</div>
+
+	</body>
+</html>
